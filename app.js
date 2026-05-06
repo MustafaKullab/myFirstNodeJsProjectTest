@@ -20,6 +20,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to my project");
+});
+
 app.get("/test", (req, res) => {
   let numbers = "";
   for (let i = 1; i <= 100; i++) {
